@@ -1,14 +1,7 @@
-(无主题)
-
-将消息翻译为 简体中文 | 始终不翻译 英语
-Yu JingChao
-周一 2021/1/11 14:18
-require 'pry'
-
 #########################
 # Data for the newsletter
 #########################
-require "pry"
+
 CAMPUS = {
   "name": "DC",
   "address": "1440 G St NW, Washington, DC 20005",
@@ -49,15 +42,15 @@ def calculate_recipients
 end
 
 def print_recipients
-  calculate_recipients().each { |sub|
-      print "#{sub}, "
-  }
+  list = calculate_recipients
+  puts list.join(", ")
 end
 
 def print_one_article(article)
   puts article[:title]
   puts "by: #{article[:author]}"
-  puts article[:text]
+  puts "#{article[:text]}"
+  puts "\n"
 end
 
 
